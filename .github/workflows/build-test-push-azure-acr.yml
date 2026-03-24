@@ -130,7 +130,7 @@ jobs:
     # This step checks for OS, library, secret, and misconfiguration issues in the image.
     # ---------------------------------------------------------------------------------
     - name: Security Scan with Trivy
-      uses: aquasecurity/trivy-action@0.28.0
+      uses: aquasecurity/trivy-action@0.35.0
       with:
         image-ref: ${{ env.ACR_NAME }}.azurecr.io/${{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG }}
         format: 'table'
